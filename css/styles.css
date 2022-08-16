@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(182, 19, 68);
+    background-image: url('../images/background.jpg');
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+p{
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.774);
+    color: rgb(238, 238, 238);
+}
+
+
+
+.card{
+    width: 400px;
+    height: 250px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)rotateY(25deg);
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "title title title icone"
+    "chip conection conection conection"
+    "number number number number"
+    "validate validate validate validate"
+    "name name name credit";
+    padding: 16px;
+
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.05)
+    );
+
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
+    1px 1px 2px #555;
+    backdrop-filter: blur(0.25rem);
+}
+
+.card .title{
+    grid-area: title;
+}
+
+.card .icone{
+    grid-area: icone;
+ 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card .icone img{
+    height: 42px;
+    cursor: pointer;
+}
+
+.card .chip{
+    grid-area: chip;
+    display: flex;
+    align-items: center;
+}
+
+.card .chip img{
+    position: relative;
+    height: 42px;
+}
+
+.card .conection{
+    grid-area: conection;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    font-size: 25px;
+    color: white;
+
+}
+
+.card .conection img{
+    width: 28px;
+    transform: rotate(90deg);
+}
+
+.card .number{
+    grid-area: number;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    align-items: flex-end;
+    color: white;
+}
+
+.card .validate{
+    grid-area: validate;
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.primaryText{
+  
+}
+
+.secondaryText{
+    color: rgb(216, 216, 216);
+}
+
+.card .name{
+    grid-area: name;
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+}
+
